@@ -8,31 +8,60 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-copy">
+        <h1>Mergington High School</h1>
+        <h2>Extracurricular Activities</h2>
+      </div>
+      <section class="auth-panel" aria-label="Authentication panel">
+        <p id="auth-status" class="auth-status">Checking session...</p>
+        <form id="login-form" class="auth-form">
+          <div class="form-group compact">
+            <label for="username">Username</label>
+            <input type="text" id="username" required placeholder="admin_user" />
+          </div>
+          <div class="form-group compact">
+            <label for="password">Password</label>
+            <input type="password" id="password" required placeholder="Password" />
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+        <button id="logout-button" class="secondary-button hidden" type="button">
+          Sign Out
+        </button>
+        <p class="auth-help">
+          Admin and club manager roles can manage registrations. Students and guests are view-only.
+        </p>
+        <div id="auth-message" class="hidden"></div>
+      </section>
     </header>
 
     <main>
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
-          <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
         </div>
       </section>
 
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
+        <p id="signup-note" class="info-banner">
+          Registration management is limited to signed-in admins and club managers.
+        </p>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="your-email@mergington.edu"
+            />
           </div>
           <div class="form-group">
             <label for="activity">Select Activity:</label>
             <select id="activity" required>
               <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
             </select>
           </div>
           <button type="submit">Sign Up</button>

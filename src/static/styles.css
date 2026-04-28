@@ -16,7 +16,11 @@ body {
 }
 
 header {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
@@ -24,8 +28,46 @@ header {
   border-radius: 5px;
 }
 
+.header-copy {
+  flex: 1 1 320px;
+  text-align: left;
+}
+
 header h1 {
   margin-bottom: 10px;
+}
+
+.auth-panel {
+  flex: 1 1 320px;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.auth-status {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.auth-form {
+  display: grid;
+  gap: 10px;
+}
+
+.compact {
+  margin-bottom: 0;
+}
+
+.compact input {
+  padding: 8px;
+}
+
+.auth-help {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #e8eaf6;
 }
 
 main {
@@ -164,6 +206,21 @@ button:hover {
   background-color: #3949ab;
 }
 
+button:disabled {
+  background-color: #9fa8da;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  margin-top: 10px;
+  background-color: white;
+  color: #1a237e;
+}
+
+.secondary-button:hover {
+  background-color: #e8eaf6;
+}
+
 .message {
   margin-top: 20px;
   padding: 10px;
@@ -188,6 +245,15 @@ button:hover {
   border: 1px solid #bee5eb;
 }
 
+.info-banner {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  background-color: #eef3ff;
+  color: #1a237e;
+  border: 1px solid #c5d2ff;
+}
+
 .hidden {
   display: none;
 }
@@ -197,4 +263,19 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 20px;
+  }
+
+  .header-copy {
+    text-align: center;
+  }
+
+  .auth-panel {
+    max-width: none;
+    width: 100%;
+  }
 }

@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "username": "admin_user",
+      "password_hash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "role": "admin",
+      "display_name": "Alex Admin"
+    },
+    {
+      "username": "club_lead",
+      "password_hash": "31474b031f9ce2904183ddcb9dcd608600d1cf34485299a872707f3f6ef3e6c5",
+      "role": "club_manager",
+      "display_name": "Casey Club Lead"
+    },
+    {
+      "username": "student_demo",
+      "password_hash": "703b0a3d6ad75b649a28adde7d83c6251da457549263bc7ff45ec709b0a8448b",
+      "role": "student",
+      "display_name": "Sam Student"
+    },
+    {
+      "username": "guest_demo",
+      "password_hash": "6b93ccba414ac1d0ae1e77f3fac560c748a6701ed6946735a49d463351518e16",
+      "role": "registered_user",
+      "display_name": "Riley Guest"
+    }
+  ]
+}
